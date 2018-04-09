@@ -1,7 +1,7 @@
 import React from 'react';
 import EmployeeRow from '../Employee-Row/Employee-Row';
 
-const EmployeeTable = () => {
+const EmployeeTable = (props) => {
   return (
     <div className="row justify-content-center">
       <div className="col-md-offset-1 col-md-10">
@@ -18,7 +18,7 @@ const EmployeeTable = () => {
               </tr>
             </thead>
             <tbody id="employeeData">
-              <EmployeeRow />
+              {props.employees.map(employee => <EmployeeRow key={employee.id} {...employee} />)}
             </tbody>
             <tfoot>
               <tr>

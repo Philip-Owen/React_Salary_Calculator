@@ -18,7 +18,7 @@ class App extends Component {
       <div className="container">
         <h1>Salary Calculator</h1>
         <EmployeeForm addEmployee={this.handleEmployeeAdd}/>
-        <EmployeeTable />
+        <EmployeeTable employees={this.state.employees}/>
       </div>
     );
   }

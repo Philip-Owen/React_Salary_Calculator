@@ -1,13 +1,13 @@
 import React from 'react';
 
-const EmployeeRow = () => {
+const EmployeeRow = (props) => {
   return (
     <tr>
-      <td>First</td>
-      <td>Last</td>
-      <td>3311</td>
-      <td>Engineer</td>
-      <td>75,000</td>
+      <td>{props.first}</td>
+      <td>{props.last}</td>
+      <td>{props.id}</td>
+      <td>{props.title}</td>
+      <td>{props.salary}</td>
       <td><button className="btn btn-danger">Delete</button></td>
     </tr>
   );
