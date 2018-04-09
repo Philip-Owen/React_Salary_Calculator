@@ -3,18 +3,24 @@ import EmployeeForm from '../Employee-Form/Employee-Form';
 import EmployeeTable from '../Employee-Table/Employee-Table';
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
+  state = {
+    employees: [],
+  };
+
+  handleEmployeeAdd = (employee) => {
+    this.setState({
+      employees: [...this.state.employees, employee],
+    });
   }
+
   render() {
     return (
       <div className="container">
         <h1>Salary Calculator</h1>
-        <EmployeeForm />
+        <EmployeeForm addEmployee={this.handleEmployeeAdd}/>
         <EmployeeTable />
       </div>
-    )
+    );
   }
 }
 
