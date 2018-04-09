@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import EmployeeForm from '../Employee-Form/Employee-Form';
+import EmployeeTable from '../Employee-Table/Employee-Table';
 
 class App extends Component {
   constructor(props) {
@@ -7,8 +9,10 @@ class App extends Component {
   }
   render() {
     return (
-      <div>
-        <h1>Placeholder</h1>
+      <div className="container">
+        <h1>Salary Calculator</h1>
+        <EmployeeForm />
+        <EmployeeTable />
       </div>
     )
   }
