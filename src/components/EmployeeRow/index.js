@@ -1,6 +1,7 @@
 import React from 'react';
 
 const EmployeeRow = (props) => {
+
   return (
     <tr>
       <td>{props.first}</td>
@@ -8,7 +9,7 @@ const EmployeeRow = (props) => {
       <td>{props.id}</td>
       <td>{props.title}</td>
       <td>{props.salary}</td>
-      <td><button className="btn btn-danger">Delete</button></td>
+      <td><button onClick={() => props.getEmployeeId(props)} className="btn btn-danger">Remove</button></td>
     </tr>
   );
 };
