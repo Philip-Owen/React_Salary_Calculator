@@ -1,17 +1,13 @@
 import React, { Component } from 'react';
+import AppHeader from '../AppHeader';
 import EmployeeForm from '../EmployeeForm';
 import EmployeeTable from '../EmployeeTable';
-import EmployeeTableHeader from '../EmployeeTableHeader'
+import EmployeeTableHeader from '../EmployeeTableHeader';
+
 
 class App extends Component {
   state = {
-    employees: [{
-          first: 'Phil',
-          last: 'Owen',
-          id: 3333,
-          title: 'Engineer',
-          salary: 65000,
-        }],
+    employees: [],
   };
 
   handleEmployeeAdd = (employee) => {
@@ -28,9 +24,11 @@ class App extends Component {
 
   render() {
     return (
-      <div className="container">
-        <h1>Salary Calculator</h1>
-        <EmployeeForm addEmployee={this.handleEmployeeAdd}/>
+      <div className="container-fluid">
+        <div id="main-head">
+          <AppHeader />
+          <EmployeeForm addEmployee={this.handleEmployeeAdd}/>
+        </div>
         <EmployeeTable employees={this.state.employees}
                        removeEmployee={this.removeEmployee}/>
       </div>

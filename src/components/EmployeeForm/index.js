@@ -39,13 +39,13 @@ class EmployeeForm extends Component {
     return (
       <div className="row">
         <div className="col-md-offset-1 col-md-10">
-          <form onSubmit={this.handleSubmit}>
-            <div>
+          <form onSubmit={this.handleSubmit} id="employeeInput">
+            <div className="top-row">
               <input required value={this.state.newEmployee.first} onChange={this.handleChange('first')} type="text" placeholder="First Name" />
               <input required value={this.state.newEmployee.last} onChange={this.handleChange('last')} type="text" placeholder="Last Name" />
               <input required value={this.state.newEmployee.id} onChange={this.handleChange('id')} type="number" placeholder="Employee ID" />
             </div>
-            <div>
+            <div className="bottom-row">
               <input required value={this.state.newEmployee.title} onChange={this.handleChange('title')} type="text" placeholder="Job Title" />
               <input required value={this.state.newEmployee.salary} onChange={this.handleChange('salary')} type="number" placeholder="Annual Salary" />
               <button className="btn btn-primary" type="submit">Submit</button>
